@@ -371,6 +371,7 @@
     transition: .5s;
     border: 0;
     cursor: pointer;
+    outline: none;
 }
 
 .button:hover {
@@ -387,8 +388,8 @@
   box-sizing: border-box;
   padding-left: 147px;
   padding-right: 147px;
-  padding: 85px;
-  padding-bottom: 46px;
+  padding-bottom: 41px;
+  padding-top: 74px;
   font-size: 16px;
   line-height: 20px;
   background: linear-gradient(90deg, #719D44 0%, #57853C 100%);
@@ -407,11 +408,14 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  align-items: center;
 }
 
 .footer__social {
   display: flex;
   align-items: center;
+  min-width: 140px;
+  width: 140px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -430,14 +434,23 @@
 }
 
 .footer__menu-item {
-  margin-right: 80px;
+  margin-right: 61px;
 }
 .footer__social-item {
   margin-right: 30px;
 }
 
+.social__link {
+  transition: .5s;
+}
+
+.social__link:hover path {
+  fill:#F1EA68;
+}
+
 .footer__copyright-info-link {
   color: #fff;
+  transition: .5s;
 }
 
 .footer__copyright-info-link--mail {
@@ -447,8 +460,13 @@
 .footer__menu-link {
   color: #fff;
   font-weight: 700;
+  transition: .5s;
 }
 
+.footer__menu-link:hover,
+.footer__copyright-info-link:hover{
+  color: #F1EA68;
+}
 
 
 
@@ -532,6 +550,7 @@
 
 }
 .header {
+    position: relative;
     display: flex;
     align-items: center;
     max-width: 1146px;
@@ -545,13 +564,15 @@
 
 .header__wrapper {
     display: flex;
+    margin: 0;
+    padding: 0;
     width: 100%;
     justify-content: space-between;
 }
 
 .header__menu {
     position: relative;
-    padding: 16px 35px 13px 22px;
+    padding: 17px 35px 13px 22px;
 }
 
 .header__menu-list {
@@ -564,8 +585,9 @@
 
 
 .header__login {
+    position: relative;
     display: block;
-    padding: 16px 35px 13px 35px;
+    padding: 16px 35px 13px 41px;
     border-left: 2px solid #7DB35B;
     box-sizing: border-box;
     border-radius: 60px;
@@ -583,7 +605,7 @@
 
 
 .header__logo {
-    margin-right: 93px;
+    margin-right: 71px;
     margin-left: 22px;
 }
 
@@ -597,7 +619,7 @@
 }
 
 .header__menu-item {
-    margin-right: 34px;
+    margin-right: 46px;
 }
 .header__menu-item:last-child {
     margin-right: 0;
@@ -621,6 +643,7 @@
   
     cursor: pointer;
     border: none;
+    outline: none;
 }
 
 
@@ -644,7 +667,7 @@
     content: "";
     position: absolute;
     top: 20px;
-    left: 9px;
+    left: 7px;
     width: 27px;
     height: 2px;
     background: #CEECAF;
@@ -662,6 +685,35 @@
 
   .header__menu-toggle {
       display: none;
+  }
+
+
+  .header__login-popup {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    bottom: -126px;
+    right: 0;
+    padding: 27px 20px;
+    min-width: 159px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+  }
+
+  .header__login-item:not(:last-child) {
+      margin-bottom: 21px;
+  }
+
+  .header__login-item {
+    transition: .5s;
+    cursor: pointer;
+  }
+
+  .header__login-item:hover {
+    color: #72B62B;
   }
 
 
@@ -696,6 +748,7 @@
     }
     .header__wrapper {
         display: block;
+        width: auto;
     }
 
     .header__menu {
@@ -704,6 +757,7 @@
         text-align: center;
     }
     .header__login {
+        position: relative;
         border-radius: 0;
         text-align: center;
     }
@@ -735,7 +789,9 @@
         display: block;
      }
 
-
+     .header__login-popup {
+         width: 100%;
+     }
 }
 .similar-vacancy {
     padding-top: 60px;
@@ -746,7 +802,7 @@
 .similar-vacancy-wrapper{
     max-width: 1146px;
     margin: auto;
-    padding-bottom: 84px;
+    padding-bottom: 89px;
 }
 .similar-vacancy__title {
     margin: 0;
@@ -756,20 +812,23 @@
 
 .similar-vacancy__subtitle {
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     font-size: 26px;
+    line-height: 1.2;
 }
 
 .similar-vacancy__description {
     margin: 0;
     margin-bottom: 10px;
+    font-size: 14px;
 }
 
 
 .similar-vacancy__skills-item {
     padding: 3px 8px;
-    margin-right: 18px;
+    margin-right: 14px;
     margin-bottom: 10px;
+    font-size: 14px;
     border: 1px solid #CEECAF;
     box-sizing: border-box;
     border-radius: 10px;
@@ -787,8 +846,8 @@
     max-width: 854px;
     justify-content: space-between;
     /* padding: 25px 20px; */
-    padding-top: 25px;
-    padding-left: 26px;
+    padding-top: 27px;
+    padding-left: 21px;
     padding-bottom: 18px;
     padding-right: 22px;
     box-sizing: border-box;
@@ -802,6 +861,8 @@
 }
 
 .similar-vacancy__skills-list {
+    width: 410px;
+    min-width: 410px;
     padding: 0;
     list-style: none;
     display: flex;
@@ -819,16 +880,18 @@
 }
 
 .similar-vacancy__info {
-    max-width: 460px;
+    max-width: 402px;
 }
 
 .similar-vacancy__additional {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 10px;
 }
 
 .similar-vacancy__salary {
+    margin-top: 10px;
     margin: 0;
     font-size: 16px;
     font-weight: 700;
@@ -884,6 +947,14 @@
 
 .similar-vacancy__logo:hover img {
     display: none;
+}
+
+.similar-vacancy__item:hover .similar-vacancy__subtitle {
+    color: #72B62B;
+}
+
+.similar-vacancy__item:hover {
+    box-shadow: 0px 10px 20px rgba(114, 182, 43, 0.09);
 }
 
 .similar-vacancy__adress-title {
@@ -993,26 +1064,29 @@
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    margin-bottom: 17px;
+    margin-top: 16px;
+    min-width: 438px;
+    margin-bottom: 28px;
     max-width: 415px;
     list-style: none;
 }
 
 .vacancy__title {
     margin: 0;
-    margin-bottom: 37px;
+    margin-bottom: 29px;
     font-size: 46px;
 }
 
 .vacancy__description-caption {
     margin: 0;
-    margin-bottom: 9px;
+    margin-bottom: 13px;
     font-size: 22px;
 }
 
 .vacancy__description-text {
     margin: 0;
-    margin-bottom: 41px;
+    line-height: 1.2;
+    margin-bottom: 35px;
 }
 .vacancy__description-text:last-child {
     margin: 0;
@@ -1020,8 +1094,8 @@
 
 .vacancy__skills-item {
     padding: 3px 8px;
-    margin-right: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+    margin-right: 13px;
     border: 1px solid #CEECAF;
     box-sizing: border-box;
     border-radius: 10px;
@@ -1030,7 +1104,7 @@
 
 
 .vacancy__preview {
-    padding: 23px 40px 40px 40px;
+    padding: 22px 42px 40px 45px;
     background: #FFFFFF;
     box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.07);
     border-radius: 20px;
@@ -1042,10 +1116,19 @@
     opacity: 0.3;
 }
 
+.vacancy__preview-tel {
+    color:#000000;
+}
+
+.vacancy__preview-mail {
+    color: #72B62B;
+}
+
 .vacancy__salary {
     margin: 0;
     margin-bottom: 66px;
     text-align: end;
+    line-height: 1.6;
     font-size: 36px;
 }
 
@@ -1058,7 +1141,7 @@
 .vacancy__preview-values-item {
     position: relative;
     padding-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .vacancy__preview-values-item::before {
     content: "";
@@ -1074,22 +1157,23 @@
 
 .vacancy__preview-caption {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    line-height: 0.5;
     font-size: 22px;
 }
 .vacancy__preview-text {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 42px;
 }
 .vacancy__preview-text--contacts {
+    margin-bottom: 33px;
     font-weight: 700;
     font-size: 22px;
     opacity: 0.4;
 }
 
 .vacancy__preview-values-contacts {
-    padding-top: 35px;
-    padding-bottom: 23px;
+    margin-top: 36px;
 }
 
 .vacancy__preview-button {
@@ -1099,6 +1183,12 @@
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+}
+
+
+.vacancy__preview-button--active {
+    background: rgba(114, 182, 43, 0.1);
+    color: #72B62B;
 }
 
 .vacancy__preview-img {
@@ -1123,18 +1213,19 @@
 
 .vacancy__schedule-item {
     position: relative;
-    margin-right: 50px;
-    padding-left: 36px;
+    margin-right: 46px;
+    padding-left: 28px;
+    cursor: pointer;
 }
 
 .vacancy__schedule-item::before {
     content: "";
     position: absolute;
     display: block;
-    top: -2px;
-    left: 0px;
-    width: 22px;
-    height: 22px;
+    top: 0px;
+    left: 3px;
+    width: 17px;
+    height: 17px;
     background-color: #72B62B;
     border-radius: 50%;
     background-image: url(./images/checkbox.svg);
@@ -1146,6 +1237,9 @@
     position: relative;
     margin-bottom: 17px;
     padding-left: 20px;
+}
+.vacancy__duties-item:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -1203,29 +1297,61 @@
     .vacancy__duties-list {
         font-size: 12px;
     }
+
+    .vacancy__skills-list {
+        min-width: auto;
+        font-size: 12px;
+    }
+
+    .similar-vacancy__skills-list {
+        min-width: auto;
+        width: auto;
+    }
+
+    .similar-vacancy__skills-item {
+        font-size: 12px;
+    }
+
   }
 .profile__form {
     background: #FBFBFB;
-    padding-bottom: 49px;
+    padding-bottom: 32px;
     padding-top: 38px;
+}
+
+
+
+
+.profile__form--add-vacancy {
+    padding-bottom: 84px;
+}
+
+.profile__form--add-resume {
+    padding-bottom: 80px;
 }
 
 .profile__title {
     max-width: 1146px;
     padding-top: 72px;
     margin: auto;
-    margin-bottom: 41px;
+    margin-bottom: 32px;
     font-size: 46px;
 }
 
 .profile__form-title {
     margin: 0;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
     font-size: 36px;
 }
 
+.profile__form-input-title {
+    margin: 0;
+    font-size: 36px;
+    margin-bottom: 32px;
+}
+
 .profile__form-title--about {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
 }
 
 .profile__form-input-wrapper {
@@ -1233,7 +1359,7 @@
     display: flex;
     flex-direction: column;
     width: 47.5%;
-    margin-bottom: 32px;
+    margin-bottom: 14px;
 }
 
 .profile__form-input-wrapper--schedule {
@@ -1256,16 +1382,25 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
     border-radius: 10px;
     cursor: pointer;
+    caret-color: #0999aa;
 }
 
 
+.error {
+    border: 1px solid #CF2A2A;
+    border-radius: 10px;
+}
+
+.focused {
+    border: 1px solid #ACD2FF;
+    border-radius: 10px;
+}
+ 
 
 .profile__form-download-logo {
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center;
-    align-self: center; */
-    margin-top: 26px;
+  
+    margin-top: 16px;
     background-color: white;
     width: 212px;
     height: 206px;
@@ -1274,6 +1409,10 @@
     background-position: center;
     background-size: auto;
     border-radius: 20px;
+}
+
+.profile__form-download-logo--add-resume {
+    margin-top: 85px;
 }
 
 .hidden {
@@ -1289,7 +1428,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 758px;
+    /* max-width: 758px; */
+    max-width: 752px;
 }
 
 .profile__form-input-container--add-resume {
@@ -1302,7 +1442,18 @@
 .profile__form-wrapper {
     display: flex;
     justify-content: space-between;
+    max-width: 1049px; 
+    margin-bottom: 37px;
 }
+
+.profile__form-wrapper--add-vacancy {
+    margin-bottom: 0;
+}
+
+.profile__form-wrapper--add-resume {
+    margin-bottom: 14px;
+}
+
 
 .profile__form-download-input {
     display: none;
@@ -1310,21 +1461,36 @@
 
 .profile__form-preview-text {
     margin: auto;
-    padding: 10px;
+    padding: 9px 17px;
     background: #72B62B;
     vertical-align: top;
 }
 
+.profile__form-preview-text--add-resume {
+    max-width: 132px;
+    font-size: 14px;
+}
+
 .profile__form-label {
-   margin-bottom: 10px;
+   margin-bottom: 9px;
    font-size: 14px;
 }
 
 .profile__form-input-wrapper--text-area {
     width: 100%;
     max-width: 758px;
+    margin-bottom: 0;
+    margin-top: 20px;
     
 }
+
+.profile__form-input-wrapper--add-resume {
+    width: 100%;
+    max-width: 758px;
+    margin-top: 20px;
+    margin-bottom: 39px;
+}
+
 
 .profile__form-textarea {
     padding: 13px 10px;
@@ -1339,6 +1505,24 @@
     resize: none;
 }
 
+
+.profile__form-textarea--add-resume {
+    height: 127px;
+}
+.profile__form-textarea--description {
+    min-height: 127px;
+}
+
+.profile__form-textarea-container {
+    width: 100%;
+    margin-top: 62px;
+}
+
+.profile__form-input-wrapper--description {
+    margin-top: 0;
+    margin-bottom: 37px;
+}
+
 .profile__form-textarea::placeholder,
 .profile__form-input::placeholder {
     font: inherit;
@@ -1348,6 +1532,7 @@
 
 .profile__form-contact-title {
     margin: 0;
+    margin-bottom: 23px;
     font-size: 18px;
     line-height: 120%;
 }
@@ -1360,7 +1545,8 @@
     position: relative;
     padding: 7px 10px;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    min-height: 40px;
     box-sizing: border-box;
     outline: 0;
     border: 0;
@@ -1380,6 +1566,10 @@
     cursor: pointer;
 }
 
+.profile__form-arrow--toggled {
+    transform: rotate(180deg);
+}
+
 .profile__form-calendar {
     position: absolute;
     right: 15px;
@@ -1396,12 +1586,18 @@
     min-height: 50px;
     max-width: 282px;
     width: 100%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: 390px;
     display: block;
 }
 
 .profile__form-save--employer {
     margin: 0;
+}
+
+.profile__form-save--add-vacancy {
+    margin-left: auto;
+    margin-right: 490px;
 }
 
 .profile__form-contact-container {
@@ -1415,8 +1611,8 @@
 
 .profile__form-save-btn {
     position: absolute;
-    right: -205px;
-    bottom: 46px;
+    right: -193px;
+    bottom: 34px;
     display: flex;
     align-items: center;
 }
@@ -1440,7 +1636,7 @@
 
 .profile__form-list {
     position: absolute;
-    bottom: -144px;
+    bottom: -162px;
     left: 0;
     width: 100%;
     margin: 0;
@@ -1453,6 +1649,14 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
     border-radius: 10px;
 }
+
+/* .profile__form-list {
+    bottom: -162px;
+} */
+.profile__form-list--experience  {
+    bottom: -195px;
+}
+
 
 .profile__form-list-skills {
     position: absolute;
@@ -1481,10 +1685,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 24px;
 }
 .profile__form-schedule-wrapper {
     position: relative;
-    width: 30%;
+    width: 30.5%;
 }
 
 .profile__form-schedule-wrapper--schedule {
@@ -1498,20 +1703,22 @@
 
 .profile__form-schedule-label {
     position: relative;
-    margin-right: 50px;
-    padding-left: 36px;
-    margin-bottom: 15px;
+    margin-right: 30px;
+    padding-left: 24px;
+    /* margin-bottom: 15px; */
+    font-size: 14px;
 }
 .profile__form-schedule-label:last-child {
     margin-bottom: 0;
+    margin-right: 0;
 }
 
 .profile__form-schedule-label::before {
     content: "";
     position: absolute;
     display: block;
-    top: -2px;
-    left: 0px;
+    top: -4px;
+    left: -2px;
     width: 17px;
     height: 17px;
     border-radius: 50%;
@@ -1531,7 +1738,8 @@
 
 .profile__form-schedule-info {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: nowrap; */
+    max-width: 422px;
 }
 
 
@@ -1563,14 +1771,26 @@
     width: 100%;
 }
 
+.profile__form-about--about-job { 
+    padding-bottom: 97px;
+}
+
 .profile__form-about--schedule {
-    min-width: 1106px;
+    min-width: 1134px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
 .profile__form-about--personaly {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 758px;
+}
+
+.profile__form-about--job {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1587,6 +1807,13 @@
     justify-content: space-between;
 }
 
+.profile__form-about--job-experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1146px;
+}
+
 .profile__form-input-wrapper--add {
     width: 100%;
 }
@@ -1599,6 +1826,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 33px;
 }
 
 .profile__form-about-wrapper--container {
@@ -1606,6 +1834,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 758px;
+    margin-bottom: 24px;
 }
 
 .profile__form-input-wrapper--aspect {
@@ -1627,9 +1856,11 @@
 .profile__form-input-wrapper--right {
     width: 40.5%;
     max-width: 264px;
+    margin-bottom: 37px;
 }
 .profile__form-input-wrapper--left {
     width: 54.8%;
+    margin-bottom: 37px;
 }
 
 .profile__form-input-wrapper--skills {
@@ -1671,6 +1902,30 @@
     background-image: url(./images/checkbox.svg);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+
+.profile__form-input-subtitle {
+    margin: 0;
+    margin-bottom: 21px;
+    font-size: 18px;
+}
+
+.profile__form-input-subtitle--add-resume {
+    margin-bottom: 13px;
+}
+
+.profile__form-input-wrapper--job {
+    margin-bottom: 38px;
+}
+.profile__form-schedule-title {
+    margin: 0;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.profile__form-about--meet {
+    padding-top: 46px;
 }
 
 
@@ -1727,6 +1982,12 @@
     .profile__form-about--about {
         max-width: 500px;
     }
+    .profile__form-schedule-info {
+        flex-wrap: wrap;
+    }
+    .profile__form-schedule-label {
+        margin-bottom: 10px;
+    }
 
    
 } 
@@ -1774,7 +2035,7 @@
     }
 
     .profile__form-list {
-        bottom: -162px;
+        bottom: -178px;
         font-size: 12px;
     }
 
@@ -1798,6 +2059,13 @@
 /* jfglkfglkf */
     .profile__form-about--schedule {
         flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .profile__form-about--about-job {
+        padding-bottom: 25px;
+    }
+    .profile__form-about--meet {
+        padding-top: 25px;
     }
 
     .profile__form-schedule-wrapper--schedule {
@@ -1813,11 +2081,15 @@
     .profile__form-input-wrapper--experience:nth-child(3n) {
         width: 100%;
     }
+
+    .profile__form-list-skills-label {
+        font-size: 12px;
+    }
     
   }
 .add-vacancy {
-    padding-bottom: 174px;
-    padding-top: 54px;
+    padding-top: 52px;
+    padding-bottom: 175px;
     max-width: 1146px;
     margin: auto;
 }
@@ -1847,18 +2119,20 @@
 
 .add-vacancy__salary {
     margin: 0;
+    margin-top: 10px;
     font-weight: 700;
 }
 
 .add-vacancy__title {
     margin: 0;
+    margin-bottom: 32px;
     font-size: 36px;
     font-weight: 700;
 }
 
 .add-vacancy__subtitle {
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     font-size: 26px;
 }
 
@@ -1882,6 +2156,7 @@
     display: block;
     padding-top: 16px;
     padding-left: 23px;
+    padding-right: 10px;
     margin-left: auto;
     margin-right: 289px;
     min-height: 50px;
@@ -1911,7 +2186,7 @@
 
 .add-vacancy-button-text {
     position: relative;
-    padding-right: 50px;
+    padding-right: 69px;
 }
 
 .add-vacancy__item-info {
@@ -1949,7 +2224,9 @@
 
 
 @media screen and (max-width: 1280px) {
-   
+    .add-vacancy {
+        width: calc(100% - 150px);
+    }
 }
 
   

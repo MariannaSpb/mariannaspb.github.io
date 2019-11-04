@@ -2,19 +2,19 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>У Валеры</title>
-    <link rel="stylesheet" href="style.af19db2416506bc5c00d.css?cde7288bb45162e0c7cf">
+    <link rel="stylesheet" href="style.2dc297f7506a76f9a987.css?004dc55f4ab8626d32fb">
 </head>
 <body>
-<div class='root'>
+<div class="root">
     <header class="header">
         <a class="header__logo" href="#"><img src="./images/logo.svg" alt="logo" draggable="false" width="80.96" height="35.13"></a>
         <div class="header__wrapper">
             <nav class="header__menu header__menu--closed">
             <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
-            <ul class="header__menu-list">
+            <ul class="header__menu-list" role="menu" tabindex="0">
                 <li class="header__menu-item"><a class="header__menu-link" href="#">Резюме</a></li>
                 <li class="header__menu-item"><a class="header__menu-link" href="#">Вакансии</a></li>
                 <li class="header__menu-item"><a class="header__menu-link" href="#">Блог</a></li>
@@ -22,6 +22,10 @@
             </ul>
             </nav>
             <a class="header__login" href="#">Войти</a>
+            <ul class="header__login-popup hidden" tabindex="1" role="menu">
+                <li class="header__login-item" tabindex="1">Профиль</li>
+                <li class="header__login-item" tabindex="1">Выход</li>
+            </ul>
         </div>
         </header>
     <main class="employer profile">
@@ -34,11 +38,11 @@
                         <div class="profile__form-input-container">
                             <div class="profile__form-input-wrapper">
                                 <label class="profile__form-label" for="organisation">Название организации</label>
-                                <input class="profile__form-input" type="text" id="organisation" placeholder="ФИО">
+                                <input class="profile__form-input" name="organisation" type="text" id="organisation" placeholder="ФИО">
                             </div>
                             <div class="profile__form-input-wrapper">
                                 <label class="profile__form-label" for="site">Ссылка на сайт</label>
-                                <input class="profile__form-input" type="text" id="site" placeholder="www.site.ru">
+                                <input class="profile__form-input" name="site" type="text" id="site" placeholder="www.site.ru">
                             </div>
                             <div class="profile__form-input-wrapper">
                                 <label class="profile__form-label" for="city">В каком городе работаете?</label>
@@ -113,7 +117,7 @@
                     </div>
                     <div class="add-vacancy__edite">
                             <button class="button add-vacancy__edite-btn" type="button" aria-label="редактировать">
-                              <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)" fill="#fff"><path d="M22.151 15.704a.61.61 0 00-.598.623v5.528c0 1.032-.803 1.867-1.793 1.868H2.99c-.99 0-1.792-.836-1.794-1.868V5.63C1.197 4.6 2 3.764 2.99 3.762h5.307a.61.61 0 00.597-.622.61.61 0 00-.597-.623H2.989C1.339 2.52.002 3.912 0 5.63v16.226c.002 1.718 1.339 3.11 2.989 3.113H19.76c1.65-.002 2.987-1.395 2.989-3.113v-5.529a.61.61 0 00-.598-.623z"/><path d="M22.512.916a2.614 2.614 0 00-3.804 0L8.045 12.024a.629.629 0 00-.154.274L6.49 17.572a.64.64 0 00.153.606c.152.159.375.22.582.16l5.063-1.46c.1-.03.19-.085.263-.16l10.664-11.11a2.888 2.888 0 000-3.961l-.702-.731zM9.347 12.429l8.727-9.092L20.89 6.27l-8.728 9.092-2.814-2.932zm-.562 1.175l2.248 2.343-3.11.897.862-3.24zm13.584-8.875l-.634.66-2.815-2.932.634-.66a1.452 1.452 0 012.113 0l.701.73a1.605 1.605 0 010 2.202z"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h24v25H0z"/></clipPath></defs></svg>
+                              <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)" fill="#fff"><path d="M22.151 15.704a.61.61 0 00-.598.623v5.528c0 1.032-.803 1.867-1.793 1.868H2.99c-.99 0-1.792-.836-1.794-1.868V5.63C1.197 4.6 2 3.764 2.99 3.762h5.307a.61.61 0 00.597-.622.61.61 0 00-.597-.623H2.989C1.339 2.52.002 3.912 0 5.63v16.226c.002 1.718 1.339 3.11 2.989 3.113H19.76c1.65-.002 2.987-1.395 2.989-3.113v-5.529a.61.61 0 00-.598-.623z"/><path d="M22.512.916a2.614 2.614 0 00-3.804 0L8.045 12.024a.629.629 0 00-.154.274L6.49 17.572a.64.64 0 00.153.606c.152.159.375.22.582.16l5.063-1.46c.1-.03.19-.085.263-.16l10.664-11.11a2.888 2.888 0 000-3.961l-.702-.731zM9.347 12.429l8.727-9.092L20.89 6.27l-8.728 9.092-2.814-2.932zm-.562 1.175l2.248 2.343-3.11.897.862-3.24zm13.584-8.875l-.634.66-2.815-2.932.634-.66a1.452 1.452 0 012.113 0l.701.73a1.605 1.605 0 010 2.202z"/></g><defs><clipPath><path fill="#fff" d="M0 0h24v25H0z"/></clipPath></defs></svg>
                             </button>
                             <button class="button add-vacancy__edite-btn" aria-label="добавить">
                               <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,7 +144,7 @@
                         </div>
                         <div class="add-vacancy__edite">
                             <button class="button add-vacancy__edite-btn" type="button" aria-label="редактировать">
-                                <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)" fill="#fff"><path d="M22.151 15.704a.61.61 0 00-.598.623v5.528c0 1.032-.803 1.867-1.793 1.868H2.99c-.99 0-1.792-.836-1.794-1.868V5.63C1.197 4.6 2 3.764 2.99 3.762h5.307a.61.61 0 00.597-.622.61.61 0 00-.597-.623H2.989C1.339 2.52.002 3.912 0 5.63v16.226c.002 1.718 1.339 3.11 2.989 3.113H19.76c1.65-.002 2.987-1.395 2.989-3.113v-5.529a.61.61 0 00-.598-.623z"/><path d="M22.512.916a2.614 2.614 0 00-3.804 0L8.045 12.024a.629.629 0 00-.154.274L6.49 17.572a.64.64 0 00.153.606c.152.159.375.22.582.16l5.063-1.46c.1-.03.19-.085.263-.16l10.664-11.11a2.888 2.888 0 000-3.961l-.702-.731zM9.347 12.429l8.727-9.092L20.89 6.27l-8.728 9.092-2.814-2.932zm-.562 1.175l2.248 2.343-3.11.897.862-3.24zm13.584-8.875l-.634.66-2.815-2.932.634-.66a1.452 1.452 0 012.113 0l.701.73a1.605 1.605 0 010 2.202z"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h24v25H0z"/></clipPath></defs></svg>
+                                <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)" fill="#fff"><path d="M22.151 15.704a.61.61 0 00-.598.623v5.528c0 1.032-.803 1.867-1.793 1.868H2.99c-.99 0-1.792-.836-1.794-1.868V5.63C1.197 4.6 2 3.764 2.99 3.762h5.307a.61.61 0 00.597-.622.61.61 0 00-.597-.623H2.989C1.339 2.52.002 3.912 0 5.63v16.226c.002 1.718 1.339 3.11 2.989 3.113H19.76c1.65-.002 2.987-1.395 2.989-3.113v-5.529a.61.61 0 00-.598-.623z"/><path d="M22.512.916a2.614 2.614 0 00-3.804 0L8.045 12.024a.629.629 0 00-.154.274L6.49 17.572a.64.64 0 00.153.606c.152.159.375.22.582.16l5.063-1.46c.1-.03.19-.085.263-.16l10.664-11.11a2.888 2.888 0 000-3.961l-.702-.731zM9.347 12.429l8.727-9.092L20.89 6.27l-8.728 9.092-2.814-2.932zm-.562 1.175l2.248 2.343-3.11.897.862-3.24zm13.584-8.875l-.634.66-2.815-2.932.634-.66a1.452 1.452 0 012.113 0l.701.73a1.605 1.605 0 010 2.202z"/></g><defs><clipPath><path fill="#fff" d="M0 0h24v25H0z"/></clipPath></defs></svg>
                             </button>
                             <button class="button add-vacancy__edite-btn" aria-label="добавить">
                                 <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +171,7 @@
                         </div>
                         <div class="add-vacancy__edite">
                             <button class="button add-vacancy__edite-btn" type="button" aria-label="редактировать">
-                                <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)" fill="#fff"><path d="M22.151 15.704a.61.61 0 00-.598.623v5.528c0 1.032-.803 1.867-1.793 1.868H2.99c-.99 0-1.792-.836-1.794-1.868V5.63C1.197 4.6 2 3.764 2.99 3.762h5.307a.61.61 0 00.597-.622.61.61 0 00-.597-.623H2.989C1.339 2.52.002 3.912 0 5.63v16.226c.002 1.718 1.339 3.11 2.989 3.113H19.76c1.65-.002 2.987-1.395 2.989-3.113v-5.529a.61.61 0 00-.598-.623z"/><path d="M22.512.916a2.614 2.614 0 00-3.804 0L8.045 12.024a.629.629 0 00-.154.274L6.49 17.572a.64.64 0 00.153.606c.152.159.375.22.582.16l5.063-1.46c.1-.03.19-.085.263-.16l10.664-11.11a2.888 2.888 0 000-3.961l-.702-.731zM9.347 12.429l8.727-9.092L20.89 6.27l-8.728 9.092-2.814-2.932zm-.562 1.175l2.248 2.343-3.11.897.862-3.24zm13.584-8.875l-.634.66-2.815-2.932.634-.66a1.452 1.452 0 012.113 0l.701.73a1.605 1.605 0 010 2.202z"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h24v25H0z"/></clipPath></defs></svg>
+                                <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)" fill="#fff"><path d="M22.151 15.704a.61.61 0 00-.598.623v5.528c0 1.032-.803 1.867-1.793 1.868H2.99c-.99 0-1.792-.836-1.794-1.868V5.63C1.197 4.6 2 3.764 2.99 3.762h5.307a.61.61 0 00.597-.622.61.61 0 00-.597-.623H2.989C1.339 2.52.002 3.912 0 5.63v16.226c.002 1.718 1.339 3.11 2.989 3.113H19.76c1.65-.002 2.987-1.395 2.989-3.113v-5.529a.61.61 0 00-.598-.623z"/><path d="M22.512.916a2.614 2.614 0 00-3.804 0L8.045 12.024a.629.629 0 00-.154.274L6.49 17.572a.64.64 0 00.153.606c.152.159.375.22.582.16l5.063-1.46c.1-.03.19-.085.263-.16l10.664-11.11a2.888 2.888 0 000-3.961l-.702-.731zM9.347 12.429l8.727-9.092L20.89 6.27l-8.728 9.092-2.814-2.932zm-.562 1.175l2.248 2.343-3.11.897.862-3.24zm13.584-8.875l-.634.66-2.815-2.932.634-.66a1.452 1.452 0 012.113 0l.701.73a1.605 1.605 0 010 2.202z"/></g><defs><clipPath><path fill="#fff" d="M0 0h24v25H0z"/></clipPath></defs></svg>
                             </button>
                             <button class="button add-vacancy__edite-btn" aria-label="добавить">
                                 <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +190,7 @@
             <ul class="footer__menu-list">
                 <li class="footer__menu-item"><a class="footer__menu-link" href="add-resume.html" target="_blank">Найти работу</a></li>
                 <li class="footer__menu-item"><a class="footer__menu-link" href="profile.html" target="_blank">Найти сотрудника</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#" target="_blank">О проекте</a></li>
+                <li class="footer__menu-item"><a class="footer__menu-link" href="profile-employer.html" target="_blank">О проекте</a></li>
             </ul>
             <ul class="footer__social  social">
             <li class="footer__social-item">
@@ -222,7 +226,7 @@
             </ul>
         </div>
     </footer>
-    <script src="main.920a3f8e771804d20845.js?cde7288bb45162e0c7cf"></script>
+    <script src="main.e33e6593f8252e105ee6.js?004dc55f4ab8626d32fb"></script>
 </div>
 </body>
 </html> 

@@ -2,19 +2,19 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>У Валеры</title>
-    <link rel="stylesheet" href="style.af19db2416506bc5c00d.css?cde7288bb45162e0c7cf">
+    <link rel="stylesheet" href="style.2dc297f7506a76f9a987.css?004dc55f4ab8626d32fb">
 </head>
 <body>
-<div class='root'>
+<div class="root">
     <header class="header">
         <a class="header__logo" href="#"><img src="./images/logo.svg" alt="logo" draggable="false" width="80.96" height="35.13"></a>
         <div class="header__wrapper">
           <nav class="header__menu header__menu--closed">
             <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
-            <ul class="header__menu-list">
+            <ul class="header__menu-list" role="menu" tabindex="0">
               <li class="header__menu-item"><a class="header__menu-link" href="#">Резюме</a></li>
               <li class="header__menu-item"><a class="header__menu-link" href="#">Вакансии</a></li>
               <li class="header__menu-item"><a class="header__menu-link" href="#">Блог</a></li>
@@ -22,6 +22,10 @@
             </ul>
           </nav>
           <a class="header__login" href="#">Войти</a>
+          <ul class="header__login-popup hidden" tabindex="1" role="menu">
+            <li class="header__login-item" tabindex="1">Профиль</li>
+            <li class="header__login-item" tabindex="1">Выход</li>
+          </ul>
         </div>
     </header>
     <main class="main-page">
@@ -51,7 +55,7 @@
         <ul class="footer__menu-list">
           <li class="footer__menu-item"><a class="footer__menu-link" href="#" target="_blank">Найти работу</a></li>
           <li class="footer__menu-item"><a class="footer__menu-link" href="#" target="_blank">Найти сотрудника</a></li>
-          <li class="footer__menu-item"><a class="footer__menu-link" href="#" target="_blank">О проекте</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="profile-employer.html" target="_blank">О проекте</a></li>
         </ul>
         <ul class="footer__social  social">
           <li class="footer__social-item">
@@ -87,7 +91,7 @@
         </ul>
       </div>
     </footer>
-    <script src="main.920a3f8e771804d20845.js?cde7288bb45162e0c7cf"></script>
+    <script src="main.e33e6593f8252e105ee6.js?004dc55f4ab8626d32fb"></script>
 </div>
 </body>
 </html> 

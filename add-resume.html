@@ -2,19 +2,19 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>У Валеры</title>
-    <link rel="stylesheet" href="style.af19db2416506bc5c00d.css?cde7288bb45162e0c7cf">
+    <link rel="stylesheet" href="style.2dc297f7506a76f9a987.css?004dc55f4ab8626d32fb">
 </head>
 <body>
-<div class='root'>
+<div class="root">
     <header class="header">
         <a class="header__logo" href="#"><img src="./images/logo.svg" alt="logo" draggable="false" width="80.96" height="35.13"></a>
         <div class="header__wrapper">
             <nav class="header__menu header__menu--closed">
             <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
-            <ul class="header__menu-list">
+            <ul class="header__menu-list" role="menu" tabindex="0">
                 <li class="header__menu-item"><a class="header__menu-link" href="#">Резюме</a></li>
                 <li class="header__menu-item"><a class="header__menu-link" href="#">Вакансии</a></li>
                 <li class="header__menu-item"><a class="header__menu-link" href="#">Блог</a></li>
@@ -22,14 +22,18 @@
             </ul>
             </nav>
             <a class="header__login" href="#">Войти</a>
+            <ul class="header__login-popup hidden" tabindex="1" role="menu">
+                <li class="header__login-item" tabindex="1">Профиль</li>
+                <li class="header__login-item" tabindex="1">Выход</li>
+            </ul>
         </div>
         </header>
     <main class="employer profile">
         <h1 class="profile__title">Добавление резюме</h1>
-        <section class="profile__form">
+        <section class="profile__form profile__form--add-resume">
             <div class="profile__form-container">
                 <form action="#" method="POST" class="profile__form-form">
-                    <div class="profile__form-wrapper">
+                    <div class="profile__form-wrapper profile__form-wrapper--add-resume">
                         <div class="profile__form-input-container profile__form-input-container--add-resume">
                             <div class="profile__form-about-wrapper">
                                 <div class="profile__form-about profile__form-about--about">
@@ -87,19 +91,19 @@
                                         </div>
                                     </div>       
                                 </div>
-                                <div class="profile__form-download-logo">
-                                    <label class="profile__form-preview-text button" for="logo">Выбрать фото</label>
+                                <div class="profile__form-download-logo profile__form-download-logo--add-resume">
+                                    <label class="profile__form-preview-text profile__form-preview-text--add-resume button" for="logo">Выбрать фото</label>
                                     <input class="profile__form-download-input" type="file" id="logo">
                                 </div>
                             </div>
-                            <div class="profile__form-about">
+                            <div class="profile__form-about profile__form-about--about-job">
                                 <h2 class="profile__form-title">О работе</h2>
-                                <div class="profile__form-about profile__form-about--personaly">
-                                    <div class="profile__form-input-wrapper">
+                                <div class="profile__form-about profile__form-about--job">
+                                    <div class="profile__form-input-wrapper profile__form-input-wrapper--job">
                                         <label class="profile__form-label" for="job">Какая должность тебя интересует?</label>
                                         <input class="profile__form-input" type="text" id="job" placeholder="Администратор центра">
                                     </div>
-                                    <div class="profile__form-input-wrapper">
+                                    <div class="profile__form-input-wrapper profile__form-input-wrapper--job">
                                         <label class="profile__form-label" for="city">В каком городе?</label>
                                         <div class="profile__form-input-select">
                                             <input class="profile__form-input" type="text" id="city" readonly="" placeholder="Город"><svg class="profile__form-arrow" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,11 +116,11 @@
                                             <li class="profile__form-list-item">Витебск</li>
                                         </ul>
                                     </div>
-                                    <div class="profile__form-input-wrapper">
+                                    <div class="profile__form-input-wrapper profile__form-input-wrapper--job">
                                         <label class="profile__form-label" for="salary">На какую зарплату ты рассчитываешь??</label>
                                         <input class="profile__form-input" type="text" id="salary" placeholder="25 000">
                                     </div>
-                                    <div class="profile__form-input-wrapper">
+                                    <div class="profile__form-input-wrapper profile__form-input-wrapper--job">
                                         <label class="profile__form-label" for="experience">Напиши 5 основных навыков</label>
                                             <div class="profile__form-input-select profile__form-input-select--skills">
                                                 <p class ="profile__form-text hidden">Выбрано <span id="check-result"></span>
@@ -162,14 +166,14 @@
                                     </div>
                                 </div>
                                 <div class="profile__form-about profile__form-about--schedule">
-                                    <div class="profile__form-input-wrapper profile__form-schedule-wrapper profile__form-schedule-wrapper--schedule">
+                                    <div class="profile__form-input-wrapper profile__form-input-wrapper--job profile__form-schedule-wrapper profile__form-schedule-wrapper--schedule">
                                         <label class="profile__form-label" for="schedule">График работы</label>
                                         <div class="profile__form-input-select">
                                             <input class="profile__form-input" type="text" id="schedule" readonly placeholder="Полный день"><svg class="profile__form-arrow" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5.86603 7.5C5.48113 8.16667 4.51888 8.16667 4.13397 7.5L0.669874 1.5C0.284972 0.833334 0.766098 -5.89983e-08 1.5359 -1.26296e-07L8.4641 -7.31979e-07C9.2339 -7.99277e-07 9.71503 0.833332 9.33013 1.5L5.86603 7.5Z" fill="#72B62B"/>
                                             </svg>
                                         </div>
-                                        <ul class="profile__form-list hidden">
+                                        <ul class="profile__form-list profile__form-list--experience hidden">
                                             <li class="profile__form-list-item">Полный день</li>
                                             <li class="profile__form-list-item">Сменный график</li>
                                             <li class="profile__form-list-item">Удаленная работа</li>
@@ -197,8 +201,8 @@
                                 </div>
                                 
                                 <div class="profile__form-about profile__form-about--experience">
-                                    <h3 class="profile__form-input-subtitle">Наверняка ты уже где-то работал, расскажи о последних трех местах:</h3>
-                                    <div class="profile__form-about profile__form-about--job">
+                                    <h3 class="profile__form-input-subtitle profile__form-input-subtitle--add-resume">Наверняка ты уже где-то работал, расскажи о последних трех местах:</h3>
+                                    <div class="profile__form-about profile__form-about--job-experience">
                                         <div class="profile__form-input-wrapper profile__form-input-wrapper--experience">
                                             <label class="profile__form-label" for="organisation-1">Место работы</label>
                                             <input class="profile__form-input" type="text" id="organisation-1" placeholder="Администратор центра">
@@ -214,7 +218,7 @@
                                                             <path d="M5.86603 7.5C5.48113 8.16667 4.51888 8.16667 4.13397 7.5L0.669874 1.5C0.284972 0.833334 0.766098 -5.89983e-08 1.5359 -1.26296e-07L8.4641 -7.31979e-07C9.2339 -7.99277e-07 9.71503 0.833332 9.33013 1.5L5.86603 7.5Z" fill="#72B62B"></path>
                                                         </svg>
                                                 </div>
-                                                <ul class="profile__form-list hidden"  role="menu"  tabindex="0">
+                                                <ul class="profile__form-list profile__form-list--experience hidden"  role="menu"  tabindex="0">
                                                     <li class="profile__form-list-item" tabindex="0" role="menuitem">Без опыта </li>
                                                     <li class="profile__form-list-item" tabindex="0" role="menuitem">От 1 года до 3 лет</li>
                                                     <li class="profile__form-list-item" tabindex="0" role="menuitem">От 3 до 6 лет</li>
@@ -236,7 +240,7 @@
                                                                 <path d="M5.86603 7.5C5.48113 8.16667 4.51888 8.16667 4.13397 7.5L0.669874 1.5C0.284972 0.833334 0.766098 -5.89983e-08 1.5359 -1.26296e-07L8.4641 -7.31979e-07C9.2339 -7.99277e-07 9.71503 0.833332 9.33013 1.5L5.86603 7.5Z" fill="#72B62B"></path>
                                                             </svg>
                                                     </div>
-                                                    <ul class="profile__form-list hidden"  role="menu"  tabindex="0">
+                                                    <ul class="profile__form-list profile__form-list--experience hidden"  role="menu"  tabindex="0">
                                                         <li class="profile__form-list-item" tabindex="0" role="menuitem">Без опыта </li>
                                                         <li class="profile__form-list-item" tabindex="0" role="menuitem">От 1 года до 3 лет</li>
                                                         <li class="profile__form-list-item" tabindex="0" role="menuitem">От 3 до 6 лет</li>
@@ -258,7 +262,7 @@
                                                                 <path d="M5.86603 7.5C5.48113 8.16667 4.51888 8.16667 4.13397 7.5L0.669874 1.5C0.284972 0.833334 0.766098 -5.89983e-08 1.5359 -1.26296e-07L8.4641 -7.31979e-07C9.2339 -7.99277e-07 9.71503 0.833332 9.33013 1.5L5.86603 7.5Z" fill="#72B62B"></path>
                                                             </svg>
                                                     </div>
-                                                    <ul class="profile__form-list hidden"  role="menu"  tabindex="0">
+                                                    <ul class="profile__form-list profile__form-list--experience hidden"  role="menu"  tabindex="0">
                                                         <li class="profile__form-list-item" tabindex="0" role="menuitem">Без опыта </li>
                                                         <li class="profile__form-list-item" tabindex="0" role="menuitem">От 1 года до 3 лет</li>
                                                         <li class="profile__form-list-item" tabindex="0" role="menuitem">От 3 до 6 лет</li>
@@ -268,29 +272,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="profile__form-about">
+                            <div class="profile__form-about profile__form-about--meet">
                                 <h2 class="profile__form-title profile__form-title--about">Давай знакомиться</h2>
-                                <div class="profile__form-input-wrapper profile__form-input-wrapper--text-area">
+                                <div class="profile__form-input-wrapper profile__form-input-wrapper--add-resume">
                                     <label class="profile__form-label" for="achievements">Каким достижением ты гордишься больше всего?</label>
                                     <textarea class="profile__form-textarea"  id="achievements" placeholder="Достижение"></textarea>
                                 </div>
-                                <div class="profile__form-input-wrapper profile__form-input-wrapper--text-area">
+                                <div class="profile__form-input-wrapper profile__form-input-wrapper--add-resume">
                                     <label class="profile__form-label" for="duties">Какие три вещи тебя мотивируют в жизни?</label>
                                     <textarea class="profile__form-textarea"  id="duties" placeholder="Напиши через запятую"></textarea>
                                 </div>
                                 <div class="profile__form-about-wrapper profile__form-about-wrapper--container">
                                     <div class="profile__form-input-wrapper profile__form-input-wrapper--aspect">
-                                        <label class="profile__form-label" for="values">Опиши свои сильные стороны</label>
-                                        <textarea class="profile__form-textarea"  id="values" placeholder="Администратор центра"></textarea>
+                                        <label class="profile__form-label" for="values-1">Опиши свои сильные стороны</label>
+                                        <textarea class="profile__form-textarea profile__form-textarea--add-resume"  id="values-1" placeholder="Администратор центра"></textarea>
                                     </div>
                                     <div class="profile__form-input-wrapper profile__form-input-wrapper--aspect">
-                                        <label class="profile__form-label" for="values">Опиши свои слабые стороны</label>
-                                        <textarea class="profile__form-textarea"  id="values" placeholder="Администратор центра"></textarea>
+                                        <label class="profile__form-label" for="values-2">Опиши свои слабые стороны</label>
+                                        <textarea class="profile__form-textarea profile__form-textarea--add-resume"  id="values-2" placeholder="Администратор центра"></textarea>
                                     </div>
                                 </div>
-                                <div class="profile__form-input-wrapper profile__form-input-wrapper--text-area">
-                                    <label class="profile__form-label" for="duties">Чем увлекаешься в свободное время??</label>
-                                    <textarea class="profile__form-textarea"  id="duties" placeholder="Увлечения"></textarea>
+                                <div class="profile__form-input-wrapper profile__form-input-wrapper--add-resume">
+                                    <label class="profile__form-label" for="hobbi">Чем увлекаешься в свободное время??</label>
+                                    <textarea class="profile__form-textarea"  id="hobbi" placeholder="Увлечения"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -305,7 +309,7 @@
             <ul class="footer__menu-list">
                 <li class="footer__menu-item"><a class="footer__menu-link" href="add-resume.html" target="_blank">Найти работу</a></li>
                 <li class="footer__menu-item"><a class="footer__menu-link" href="profile.html" target="_blank">Найти сотрудника</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#" target="_blank">О проекте</a></li>
+                <li class="footer__menu-item"><a class="footer__menu-link" href="profile-employer.html" target="_blank">О проекте</a></li>
             </ul>
             <ul class="footer__social  social">
             <li class="footer__social-item">
@@ -341,7 +345,7 @@
             </ul>
         </div>
     </footer>
-    <script src="main.920a3f8e771804d20845.js?cde7288bb45162e0c7cf"></script>
+    <script src="main.e33e6593f8252e105ee6.js?004dc55f4ab8626d32fb"></script>
 </div>
 </body>
 </html> 

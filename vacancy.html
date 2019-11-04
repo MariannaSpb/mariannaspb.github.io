@@ -5,16 +5,16 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>У Валеры</title>
-    <link rel="stylesheet" href="style.af19db2416506bc5c00d.css?cde7288bb45162e0c7cf">
+    <link rel="stylesheet" href="style.2dc297f7506a76f9a987.css?004dc55f4ab8626d32fb">
 </head>
 <body>
 <div class='root'>
     <header class="header">
         <a class="header__logo" href="#"><img src="./images/logo.svg" alt="logo" draggable="false" width="80.96" height="35.13"></a>
-        <div class="header__wrapper">
+        <ul class="header__wrapper">
           <nav class="header__menu header__menu--closed">
             <button class="header__menu-toggle" type="button" aria-label="Открыть меню"></button>
-            <ul class="header__menu-list">
+            <ul class="header__menu-list" role="menu" tabindex="0">
               <li class="header__menu-item"><a class="header__menu-link" href="#">Резюме</a></li>
               <li class="header__menu-item"><a class="header__menu-link" href="#">Вакансии</a></li>
               <li class="header__menu-item"><a class="header__menu-link" href="#">Блог</a></li>
@@ -22,6 +22,10 @@
             </ul>
           </nav>
           <a class="header__login" href="#">Войти</a>
+          <ul class="header__login-popup hidden" tabindex="1" role="menu">
+            <li class="header__login-item" tabindex="1">Профиль</li>
+            <li class="header__login-item" tabindex="1">Выход</li>
+          </ul>
         </div>
     </header>
     <main class="main-page">
@@ -32,7 +36,7 @@
             <h3 class="vacancy__description-caption"><strong>Описание:</strong></h3>
             <p class="vacancy__description-text">Компания "Балет с 2 лет" не просто чтит и поддерживает вековые традиции русской балетной школы, но и приносит чувство единения друг с другом всем, кто с ней связан. </p>
             <h3 class="vacancy__description-caption"><strong>Вознаграждение:</strong></h3>
-            <p class="vacancy__description-text">Карьерный рост, молодой колектив, обучение внутри компании </p>
+            <p class="vacancy__description-text">Карьерный рост, молодой колектив,<br>обучение внутри компании </p>
             <h3 class="vacancy__description-caption"><strong>Опыт работы:</strong></h3>
             <p class="vacancy__description-text">От 1 года до 3 лет</p>
             <h3 class="vacancy__description-caption"><strong>Обязанности:</strong></h3>
@@ -79,6 +83,10 @@
             <div class="vacancy__preview-values-contacts">
               <p class="vacancy__preview-text vacancy__preview-text--contacts">Контакты</p>
               <span>livefund.ru</span>
+              <div class="vacancy__preview-contact hidden">
+                <a class="vacancy__preview-tel" href="tel:89001112233">8 (900) 111 - 22 -33</a>
+                <a class="vacancy__preview-mail" href="mailto:Igor222@gmai.com">Igor222@gmai.com</a>
+              </div>
             </div>
             <button type="button" class="button vacancy__preview-button" aria-label="Связаться">Связаться</button>
           </article>
@@ -229,7 +237,7 @@
         </ul>
       </div>
     </footer>
-    <script src="main.920a3f8e771804d20845.js?cde7288bb45162e0c7cf"></script>
+    <script src="main.e33e6593f8252e105ee6.js?004dc55f4ab8626d32fb"></script>
 </div>
 </body>
 </html> 

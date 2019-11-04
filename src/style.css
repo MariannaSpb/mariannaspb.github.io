@@ -1,0 +1,41 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts.css);
+@import url(./blocks/button.css);
+@import url(./blocks/footer.css);
+@import url(./blocks/header.css);
+@import url(./blocks/similar-vacancy.css);
+@import url(./blocks/vacancy.css);
+@import url(./blocks/profile.css);
+@import url(./blocks/add-vacancy.css);
+@import url(./blocks/default-page.css);
+
+
+body {
+  /* min-width: 1140px; */
+  margin: 0 auto;
+  color:  #000000;
+  font-family: "Geometria", "Arial", sans-serif;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: greyscale;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

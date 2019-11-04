@@ -1,0 +1,244 @@
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1146px;
+    margin: auto;
+    margin-top: 66px;
+    background: linear-gradient(90deg, #72B62B 0%, #57853C 100%);
+    box-shadow: 0px 20px 24px rgba(113, 181, 41, 0.26);
+    border-radius: 60px;
+    box-sizing: border-box;
+}
+
+.header__wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header__menu {
+    position: relative;
+    padding: 17px 35px 13px 22px;
+}
+
+.header__menu-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+.header__login {
+    position: relative;
+    display: block;
+    padding: 16px 35px 13px 41px;
+    border-left: 2px solid #7DB35B;
+    box-sizing: border-box;
+    border-radius: 60px;
+    background: #5A8B3A;
+    /* border: 1px solid #fff; */
+    color: white;
+    transition: .5s;
+}
+
+.header__login:hover {
+    color: #5B8C3A;
+    background: #F1EA68;
+    border-left: none;
+}
+
+
+.header__logo {
+    margin-right: 71px;
+    margin-left: 22px;
+}
+
+
+
+.header__menu-link {
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+    transition: .5s;
+}
+
+.header__menu-item {
+    margin-right: 46px;
+}
+.header__menu-item:last-child {
+    margin-right: 0;
+}
+.header__menu-link:hover {
+   color: #F1EA68;
+}
+
+/* бургер */
+.header__menu-toggle {
+    position: absolute;
+    top: -34px;
+    right: 13px;
+    z-index: 2;
+  
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    background-color: #EBFFBF;
+  
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+.header__menu--closed .header__menu-toggle::before {
+    content: "";
+  
+    position: absolute;
+    top: 14px;
+    left: 11px;
+    width: 23px;
+    height: 12px;
+    background-image: url(../images/burger.svg);
+  }
+
+  .header__menu--opened .header__menu-toggle {
+    background-color: transparent;
+  }
+
+  .header__menu--opened .header__menu-toggle::before,
+  .header__menu--opened .header__menu-toggle::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 7px;
+    width: 27px;
+    height: 2px;
+    background: #CEECAF;
+    border-radius: 3px;
+  }
+
+  .header__menu--opened .header__menu-toggle::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  .header__menu--opened .header__menu-toggle::after {
+    transform: rotate(-45deg);
+  }
+
+  .header__menu-toggle {
+      display: none;
+  }
+
+
+  .header__login-popup {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    bottom: -126px;
+    right: 0;
+    padding: 27px 20px;
+    min-width: 159px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+  }
+
+  .header__login-item:not(:last-child) {
+      margin-bottom: 21px;
+  }
+
+  .header__login-item {
+    transition: .5s;
+    cursor: pointer;
+  }
+
+  .header__login-item:hover {
+    color: #72B62B;
+  }
+
+
+
+
+@media screen and (max-width: 1280px) {
+    .header {
+    width: calc(100% - 150px);
+    }
+}
+
+  
+@media screen and (max-width : 1024px) {
+    .header {
+        width: calc(100% - 60px);
+    }
+}
+  
+  
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding-top: 23px;
+        width: 100%;
+        display: block;
+        border-radius: 0;
+        margin-top: 0;
+    }
+    .header__logo {
+        margin: 0;
+    }
+    .header__wrapper {
+        display: block;
+        width: auto;
+    }
+
+    .header__menu {
+        display: block;
+        padding: 22px;
+        text-align: center;
+    }
+    .header__login {
+        position: relative;
+        border-radius: 0;
+        text-align: center;
+    }
+
+    .header__menu-list {
+        display: block;
+    }
+    .header__menu-link {
+        margin-right: 0;
+    }
+
+    .header__menu-item {
+        margin-right: 0;
+    }
+
+
+      .header__menu-toggle {
+        display: block;
+    }
+
+      .header__menu--closed .header__menu-list {
+        display: none;
+      }
+
+      .header__login {
+          display: none;
+        }
+     .active {
+        display: block;
+     }
+
+     .header__login-popup {
+         width: 100%;
+     }
+}

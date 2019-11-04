@@ -1,0 +1,250 @@
+.similar-vacancy {
+    padding-top: 60px;
+    background: #FBFBFB;
+    color: #000000;
+}
+
+.similar-vacancy-wrapper{
+    max-width: 1146px;
+    margin: auto;
+    padding-bottom: 89px;
+}
+.similar-vacancy__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.similar-vacancy__subtitle {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.similar-vacancy__description {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+.similar-vacancy__skills-item {
+    padding: 3px 8px;
+    margin-right: 14px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #CEECAF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #72B62B;
+}
+
+.similar-vacancy__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.similar-vacancy__item {
+    display: flex;
+    max-width: 854px;
+    justify-content: space-between;
+    /* padding: 25px 20px; */
+    padding-top: 27px;
+    padding-left: 21px;
+    padding-bottom: 18px;
+    padding-right: 22px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+}
+
+.similar-vacancy__item:not(:last-child) {
+    margin-bottom: 22px;
+}
+
+.similar-vacancy__skills-list {
+    width: 410px;
+    min-width: 410px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.similar-vacancy__schedule-list {
+    display: flex;;
+    padding: 0;
+    list-style: none;
+}
+
+.similar-vacancy__schedule-item {
+    margin-right: 10px;;
+}
+
+.similar-vacancy__info {
+    max-width: 402px;
+}
+
+.similar-vacancy__additional {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.similar-vacancy__salary {
+    margin-top: 10px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.similar-vacancy__publication {
+    font-size: 14px;
+    opacity: 0.3;
+}
+
+.similar-vacancy__logo img {
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.similar-vacancy__logo {
+    position: relative;
+    width: 220px;
+    transition: opacity .5s;
+}
+
+.similar-vacancy__logo::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #CEECAF;
+    background-position: center;
+    opacity: 0;
+}
+
+.similar-vacancy__adress {
+    display: none;
+    padding-top: 18px;
+    background-image: url(../images/image-bg.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    cursor: pointer;
+}
+
+.similar-vacancy__logo:hover .similar-vacancy__adress {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.similar-vacancy__logo:hover:before {
+    opacity: 1;
+}
+
+.similar-vacancy__logo:hover img {
+    display: none;
+}
+
+.similar-vacancy__item:hover .similar-vacancy__subtitle {
+    color: #72B62B;
+}
+
+.similar-vacancy__item:hover {
+    box-shadow: 0px 10px 20px rgba(114, 182, 43, 0.09);
+}
+
+.similar-vacancy__adress-title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.similar-vacancy__adress-text {
+    margin: 0;
+    font-size: 16px;
+}
+.similar-vacancy__adress-text:not(:last-child) {
+    margin-bottom: 31px;
+}
+
+
+
+
+@media screen and (max-width: 1280px) {
+    .similar-vacancy-wrapper {
+    width: calc(100% - 150px);
+    }
+}
+
+  
+@media screen and (max-width : 1024px) {
+    .similar-vacancy-wrapper {
+        width: calc(100% - 60px);
+    }
+}
+  
+  
+@media screen and (max-width : 768px) {
+    .similar-vacancy {
+        padding-top: 40px;
+    }
+    .similar-vacancy-wrapper {
+        width: calc(100% - 40px)
+    }
+    .similar-vacancy__title {
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+    .similar-vacancy__subtitle {
+        font-size: 18px;
+    }
+    .similar-vacancy__item {
+        flex-direction: column;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .similar-vacancy__item {
+        margin-bottom: 0;
+    }
+
+    .similar-vacancy__logo:hover .similar-vacancy__adress {
+        display: none;
+    }
+
+    .similar-vacancy__logo:hover img {
+        display: block;
+    }
+    .similar-vacancy__logo {
+        margin: 0 auto;
+    }
+    .similar-vacancy__info {
+        width: 100%;
+        max-width: max-content;
+    }
+    .similar-vacancy__publication {
+        display: none;
+    }
+    .similar-vacancy__logo:hover:before {
+        opacity: 0;
+    }
+    .similar-vacancy__schedule-list {
+        margin-bottom: 20px;
+    }
+    .similar-vacancy__description {
+        font-size: 12px;
+    }
+    .similar-vacancy__skills-list {
+        font-size: 12px;
+    }
+    .similar-vacancy__schedule-list {
+        font-size: 12px;
+    }
+  }
